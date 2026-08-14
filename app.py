@@ -107,4 +107,4 @@ def export():
     out=io.StringIO(); w=csv.writer(out)
     if rows: w.writerow(rows[0].keys()); [w.writerow(list(r)) for r in rows]
     return send_file(io.BytesIO(out.getvalue().encode("utf-8-sig")),mimetype="text/csv",as_attachment=True,download_name=f"laporan_sipandu_{tahun}.csv")
-if __name__=="__main__": init_db(); app.run(host="0.0.0.0",port=5000,debug=True)
+if __name__=="__main__": init_db();)
